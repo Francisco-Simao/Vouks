@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Vouks - Consultoria</title>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- TELA INICIAL -->
+    <!-- TELA DE LOGIN -->
     <div class="tela-inicial" id="telaInicial">
         <img src="img/icone.jpeg" alt="Logo Vouks" class="logo-grande">
         <h1>VOUKS</h1>
@@ -22,17 +21,51 @@
         </div>
     </div>
 
-    <!-- TELA PRINCIPAL (DEPOIS DO LOGIN) -->
+    <!-- TELA PRINCIPAL COM FORMULÁRIO -->
     <div class="tela-principal" id="telaPrincipal">
         <div class="cabecalho">
-            <img src="img/icone.jpeg" alt="Logo Vouks" class="logo-pequena">
-            <span class="nome-cabecalho">VOUKS</span>
+            <div class="logo-area">
+                <img src="img/icone.jpeg" alt="Logo Vouks" class="logo-pequena">
+                <span class="nome-cabecalho">VOUKS</span>
+            </div>
+            <button class="btn-sair" onclick="sair()">SAIR</button>
         </div>
+
         <div class="conteudo">
-            Bem-vindo ao sistema Vouks!
+            <div class="formulario">
+                <h2>INFORME SUA DEMANDA</h2>
+
+                <label>Descreva sua demanda:</label>
+                <textarea placeholder="Escreva aqui o que você precisa..." id="demanda"></textarea>
+
+                <label>Qual a sua dificuldade?</label>
+                <textarea placeholder="Explique o problema que está enfrentando..." id="dificuldade"></textarea>
+
+                <label>Nome da empresa:</label>
+                <input type="text" placeholder="Digite o nome da empresa" id="empresa">
+                
+                <div class="opcao">
+                    <input type="checkbox" id="anonimo">
+                    <label for="anonimo">Desejo permanecer anônimo</label>
+                </div>
+
+                <label>Como deseja receber a solução?</label>
+                <div class="opcoes-atendimento">
+                    <div class="opcao">
+                        <input type="radio" name="atendimento" id="pessoalmente" value="pessoalmente">
+                        <label for="pessoalmente">Pessoalmente</label>
+                    </div>
+                    <div class="opcao">
+                        <input type="radio" name="atendimento" id="app" value="app">
+                        <label for="app">Continuar pelo aplicativo</label>
+                    </div>
+                </div>
+
+                <button onclick="enviar()">ENVIAR</button>
+            </div>
         </div>
     </div>
 
-    <script src="scritp.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
