@@ -32,7 +32,7 @@ function enviar() {
     let nomeEmpresa = empresa;
     if(anonimo) nomeEmpresa = "Anônimo";
 
-    alert(`Dados enviados com sucesso!\n\nEmpresa: ${nomeEmpresa}\nAtendimento: ${atendimento.value}\nAgradecemos pela confiança!`);
+    alert(`Dados enviados com sucesso!\n\nEmpresa: ${nomeEmpresa}\nAtendimento: ${atendimento.value}\nAgradecemos pela confiança. A Vouks Consultoria — construindo soluções, transformando negócios.`);
 
     // Limpar campos
     document.getElementById('demanda').value = "";
