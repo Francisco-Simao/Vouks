@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOUKS Consultoria</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0A2342;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: transparent;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #E4E4E4;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #E4E4E4;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #13315C;
+            color: white;
+            border: 1px solid #C9A86A;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Tela de sucesso */
+        #telaSucesso {
+            text-align: center;
+            display: none; /* Começa escondido */
+        }
+
+        #telaSucesso h3 {
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        #telaSucesso p{
+            color: white;
+        }
+
+        .botoes-app {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-app {
+            background-color: #25D366;
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-cadastro {
+            background-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Formulário -->
+    <div id="formulario">
+        <h2>VOUKS Consultoria</h2>
+        <div class="form-group">
+            <label>Descreva sua demanda:</label>
+            <textarea rows="4" placeholder="Qual a sua dificuldade?" required></textarea>
+        </div>
+        <div class="form-group">
+            <label>Nome da empresa:</label>
+            <input type="text" required>
+        </div>
+        <div class="form-group">
+            <label>Deseja permanecer anônimo?</label>
+            <select>
+                <option>Não</option>
+                <option>Sim</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Como deseja receber a solução?</label>
+            <select>
+                <option>Pessoalmente</option>
+                <option>Continuar pelo aplicativo</option>
+            </select>
+        </div>
+        <button onclick="enviarFormulario()">Enviar Demanda</button>
+    </div>
+
+    <!-- Tela que aparece depois -->
+    <div id="telaSucesso">
+        <h3>✅ Demanda recebida com sucesso!</h3>
+        <p>Para que possamos analisar e oferecer a <strong>melhor solução</strong> para o seu problema, instale nosso aplicativo e faça seu cadastro.</p>
+        
+        <div class="botoes-app">
+            <a href="#" class="btn-app">📲 Instalar App</a>
+            <a href="#" class="btn-app btn-cadastro">🔐 Fazer Cadastro</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function enviarFormulario() {
+        // Esconde o formulário
+        document.getElementById('formulario').style.display = 'none';
+        // Mostra a tela de sucesso
+        document.getElementById('telaSucesso').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
