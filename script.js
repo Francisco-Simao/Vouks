@@ -6,8 +6,6 @@ function logar() {
     if(email === "" || senha === "") {
         alert("Preencha todos os campos!");
     } else {
-        document.getElementById('telaInicial').style.display = 'none';
-        document.getElementById('telaPrincipal').style.display = 'flex';
         window.location.href = 'forms.html';
     }
 }
